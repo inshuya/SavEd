@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+html, body {
+  height: 100%; 
+  margin: 0px; 
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  background: #333;
+  padding: 15px;
+  text-align:center;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.leftpanel{
+  background: #D3D3D3;
+  box-shadow: -40px 80px 80px -10px rgba(0, 0, 0, 0.7);
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.rightpanel{
+  background: #666;
+  height: 100vh
+}
+
+#wrapper {
+  height: 100%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  outline: 1px solid red;
 }
 
-.App-link {
-  color: #61dafb;
+#wrapper > .header {
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#wrapper > .header + div {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+#wrapper > .header + div > div:first-of-type {
+  -webkit-flex: 2 0 0;
+  flex: 2 0 0;
+}
+
+#wrapper > .header + div > div:last-of-type {
+  -webkit-flex: 8 0 0;
+  flex: 8 0 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
